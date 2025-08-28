@@ -1,10 +1,11 @@
 import 'dart:io';
 
+import 'package:dart_basics/IceCream';
+
 void main(List<String> arguments) {
-  //  listLoop();
-  //setLoop();
-  //mapLoop();
-  ejercicio07();
+  var chocolate = IceCream();
+  chocolate.flavor = "chocolate";
+  chocolate.charge();
 }
 
 /*
@@ -308,6 +309,22 @@ void mapLoop() {
   });
 }
 
+void nullability() {
+  String? name = "Guido"; // Puede ser nulo
+  name = "";
+  name = null;
+  String example2 = name ?? "Invitado";
+
+  name ??= "Pepe";
+
+  IceCream? test = IceCream();
+
+  if (name != null) {
+    print("Hola $name");
+  }
+
+  int example = 13;
+}
 /*
 + -----------------------------------------+
 |          EJERCICIOS                     |
@@ -468,7 +485,7 @@ void ejercicio06() {
   print("Palabras únicas: $resultado");
 }
 
-void ejercicio07(){
+void ejercicio07() {
   /*
   Ejercicio 7: CONTAR LA FRECUENCIA DE PALABRASD EN UN MAP
 
@@ -488,7 +505,7 @@ void ejercicio07(){
     "codigo",
     "flutter",
     "movil",
-    "dart"
+    "dart",
   ];
 
   Map<String, int> frecuencia = {};
